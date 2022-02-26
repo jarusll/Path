@@ -1,4 +1,7 @@
 {
   "name": "@jarusll/path",
-  "version": "0.0.1"
+  "version": "0.1.0",
+  "dependencies": {
+    "path": "^0.12.7"
+  }
 }
