@@ -1,5 +1,7 @@
 {
   "name": "@jarusll/path",
+  "author": "Suraj Yadav <ysuraj877@gmail.com> (https://jarusll.github.io)",
+  "repository": "github:jarusll/Path",
   "version": "0.2.0",
   "main": "src/main.cjs",
   "license": "MIT",
@@ -7,8 +9,10 @@
     "test": "mocha"
   },
   "dependencies": {
-    "chai": "^4.3.6",
-    "mocha": "^9.2.1",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.1"
   }
 }
