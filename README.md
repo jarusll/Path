@@ -13,19 +13,11 @@ An wrapper class for node's `path` module.
 
 ![Class Diagram](https://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/jarusll/Path/master/Path.puml)
 
-I support
-- `isAbsolute()`
-- `isRelative()`
-- `isDirectory()`
-- `isFile()`
-- `directory()`
-- `file()`
-
 ### TODO
 - [ ] Add `relative`,`resolve` and `extension` messages
 - [ ] Add `asPath` message for String in IIFE
-- [ ] Add UML diagram
 - [ ] Bundling? for fun
 ### DONE
 - [x] Add unit tests
 - [x] Add `join` and `parse`
+- [x] Add UML diagram
