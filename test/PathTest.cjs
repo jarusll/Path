@@ -30,4 +30,19 @@ describe("Path", function(){
         expect(testJsPath.isFile()).to.be.true
         expect(testJsPath.isDirectory()).to.be.false
     })
+    it("should join path when given as a Path instance", function(){
+        expect(testJsPath.directory().join(new Path("yolo.js")).path).to.equal("/home/jarusll/yolo.js")
+    })
+    it("should join path when given as a string", function(){
+        expect(testJsPath.directory().join("yolo.js").path).to.equal("/home/jarusll/yolo.js")
+    })
+    it("should parse given path", function(){
+        expect(testJsPath.parse()).to.deep.equal({
+            root: '/',
+            dir: '/home/jarusll',
+            base: 'test.js',
+            name: 'test',
+            ext: '.js'
+        })
+    })
 })

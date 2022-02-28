@@ -43,14 +43,31 @@ class Path {
 
         return Path.fromString(path.basename(this.path))
     }
+
+    join(aPath){
+        // overloading aPath and String
+        if (aPath instanceof Path){
+            this.path = path.join(this.path, aPath.path)
+        } else {
+            this.path = path.join(this.path, aPath)
+        }
+        return this
+    }
+
+    parse(){
+        /*
+        Path.fromString('/home/jarusll/test.js').parse() -> {
+            root: '/',
+            dir: '/home/jarusll',
+            base: 'test.js',
+            name: 'test',
+            ext: 'js'
+        }
+        */
+        return path.parse(this.path)
+    }
 }
 
-// temp test code
-// console.log((new Path("/home/jarusll")).isDirectory())
-// console.log((new Path("/home/jarusll/test.js")).isDirectory())
-// console.log((new Path("/home/jarusll/test.js")).file())
-// console.log((new Path("/home/jarusll/test.js")).directory())
-// console.log((new Path("/")).directory())
 module.exports = Path
 
 String.prototype.asPath = function(){
