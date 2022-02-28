@@ -20,7 +20,10 @@ I support
 - `file()`
 
 ### TODO
+- [ ] Add `relative`,`resolve` and `extension` messages
 - [ ] Add `asPath` message for String in IIFE
+- [ ] Add UML diagram
+- [ ] Bundling? for fun
 ### DONE
 - [x] Add unit tests
 - [x] Add `join` and `parse`

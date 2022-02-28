@@ -8,12 +8,12 @@ class Path {
             `new Path(FILE_PATH)`
             `FILE_PATH_IN_STRING.asPath()`
     */
-    constructor(filePath){
-        this.path = filePath
+    constructor(pathString){
+        this.path = pathString
     }
 
-    static fromString(filePath){
-        return new this(filePath)
+    static fromString(pathString){
+        return new this(pathString)
     }
 
     isAbsolute(){
@@ -44,12 +44,12 @@ class Path {
         return Path.fromString(path.basename(this.path))
     }
 
-    join(aPath){
+    join(aPathOrString){
         // overloading aPath and String
-        if (aPath instanceof Path){
-            this.path = path.join(this.path, aPath.path)
+        if (aPathOrString instanceof Path){
+            this.path = path.join(this.path, aPathOrString.path)
         } else {
-            this.path = path.join(this.path, aPath)
+            this.path = path.join(this.path, aPathOrString)
         }
         return this
     }

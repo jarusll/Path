@@ -1,0 +1,15 @@
+@startuml
+class Path{
+    String path
+    constructor(stringPath)
+    static fromString(stringPath)
+    isAbsolute()
+    isRelative()
+    isDirectory()
+    isFile()
+    directory()
+    file()
+    join(aPathOrString)
+    parse()
+}
+@enduml
