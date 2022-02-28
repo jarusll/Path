@@ -11,6 +11,8 @@ An wrapper class for node's `path` module.
     - `Path.fromString(PATH_STRING)`
     - `PATH_STRING.asPath()` (WIP)
 
+![Class Diagram](https://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/jarusll/Path/master/Path.puml)
+
 I support
 - `isAbsolute()`
 - `isRelative()`
