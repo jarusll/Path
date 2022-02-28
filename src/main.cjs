@@ -66,6 +66,15 @@ class Path {
         */
         return path.parse(this.path)
     }
+    relativeTo(aPathOrString){
+        if (aPathOrString instanceof Path){
+            return Path.fromString(path.relative(this.path, aPathOrString.path))
+        }
+        return Path.fromString(path.relative(this.path, aPathOrString))
+    }
+    extension(){
+        return path.extname(this.path) 
+    }
 }
 
 module.exports = Path

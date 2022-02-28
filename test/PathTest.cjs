@@ -45,4 +45,16 @@ describe("Path", function(){
             ext: '.js'
         })
     })
+    it("should return relative path for path given as string", function(){
+        expect(testJsPath.relativeTo('/home/jarusll/abc/xyz').path).to.equal(Path.fromString('../abc/xyz').path)
+    })
+    it("should return relative path for path given as Path", function(){
+        expect(testJsPath.relativeTo(Path.fromString('/home/jarusll/abc/xyz')).path).to.equal(Path.fromString('../abc/xyz').path)
+    })
+    it("should return extension", function(){
+        console.log(process.cwd())
+        expect(testJsPath.extension()).to.equal('.js')
+        expect(Path.fromString('abc.index.md').extension()).to.equal('.md')
+        expect(Path.fromString('.index').extension()).to.equal('')
+    })
 })
