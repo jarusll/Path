@@ -20,7 +20,7 @@ I support
 - `file()`
 
 ### TODO
-- [ ] Add `join` and `parse`
 - [ ] Add `asPath` message for String in IIFE
 ### DONE
 - [x] Add unit tests
+- [x] Add `join` and `parse`
