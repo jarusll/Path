@@ -41,7 +41,7 @@ class Path {
             throw Error("Should be a file")
         }
 
-        return path.basename(this.path)
+        return Path.fromString(path.basename(this.path))
     }
 }
 

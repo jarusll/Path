@@ -1,31 +1,33 @@
-const { it, before, after } = require("mocha")
+const { it } = require("mocha")
 const Path = require("../src/main.cjs")
-const assert = require("chai").assert
+const expect = require("chai").expect
 
 describe("Path", function(){
     let testJsPath = new Path("/home/jarusll/test.js")
     it("inits", function(){
-        assert.instanceOf(testJsPath, Path)
+        expect(testJsPath).to.be.instanceOf(Path)
     })
     it("inits with correct path", function(){
-        assert.equal(testJsPath.path, "/home/jarusll/test.js")
+        expect(testJsPath.path).to.equal("/home/jarusll/test.js")
     })
-    it("gives absolute path", function(){
-        assert.equal(testJsPath.directory().path, new Path('/home/jarusll').path)
+    it("should give directory path", function(){
+        expect(testJsPath.directory()).to.be.instanceOf(Path)
+        expect(testJsPath.directory().path).to.equal('/home/jarusll')
     })
-    it("gives file name", function(){
-        assert.equal(testJsPath.file(), 'test.js')
+    it("should give file path", function(){
+        expect(testJsPath.file()).to.be.instanceOf(Path)
+        expect(testJsPath.file().path).to.equal('test.js')
     })
-    it("tests absolute path", function(){
-        assert.isTrue(testJsPath.isAbsolute())
-        assert.isFalse(testJsPath.isRelative())
+    it("should be true for absolute and false for relative", function(){
+        expect(testJsPath.isAbsolute()).to.be.true
+        expect(testJsPath.isRelative()).to.be.false
     })
-    it("tests relative path", function(){
-        assert.isTrue(new Path("home/jarusll").isRelative())
-        assert.isFalse(new Path("home/jarusll").isAbsolute())
+    it("should be true for relative and false for absolute", function(){
+        expect(new Path("home/jarusll").isRelative()).to.be.true
+        expect(new Path("home/jarusll").isAbsolute()).to.be.false
     })
-    it("tests file", function(){
-        assert.isTrue(testJsPath.isFile())
-        assert.isFalse(testJsPath.isDirectory())
+    it("should be true as file and false as directory", function(){
+        expect(testJsPath.isFile()).to.be.true
+        expect(testJsPath.isDirectory()).to.be.false
     })
 })
