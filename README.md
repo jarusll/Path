@@ -1,5 +1,5 @@
 # Path
-An wrapper class for node's `path` module.
+A wrapper class for node's `path` module.
 
 # Documentation
 - I represent a filepath in system.
