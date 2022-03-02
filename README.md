@@ -11,8 +11,7 @@ A wrapper class for node's `path` module.
     - `Path.fromString(PATH_STRING)`
     - `PATH_STRING.asPath()`
 
-![Class Diagram](https://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/jarusll/Path/master/Path.puml)
-<!-- ![Class Diagram](https://www.plantuml.com/plantuml/png/PP3H3i8W34NV-GeUsL_CnFYgKN-WCgOO1alR6Otntns5QQ8lDt3lkMdJbXYGfo4e6u187nXzF3-LrXfe1tmnZNffLTDiI5OvFSw6_4LiYiGuMKveI81SQ2GZ1lPMzvY6qlqZH3ojJfJ2nCuqrTYxC5TlNsFjqUKPZu-pyI77ykj-qbuoURexkqW-nOMz9XyDv1MsMBOgu0X8Imdh-6EgXWXGuVDvLEjYDv_m3G00) -->
+![Class Diagram](https://www.plantuml.com/plantuml/png/PP3H3i8W34NV-GeUsL_CnFYgKN-WCgOO1alR6Otntns5QQ8lDt3lkMdJbXYGfo4e6u187nXzF3-LrXfe1tmnZNffLTDiI5OvFSw6_4LiYiGuMKveI81SQ2GZ1lPMzvY6qlqZH3ojJfJ2nCuqrTYxC5TlNsFjqUKPZu-pyI77ykj-qbuoURexkqW-nOMz9XyDv1MsMBOgu0X8Imdh-6EgXWXGuVDvLEjYDv_m3G00)
 
 ### TODO
 ### DONE
