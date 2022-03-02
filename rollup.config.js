@@ -1,3 +1,8 @@
+import { terser } from "rollup-plugin-terser";
+import { nodeResolve } from "@rollup/plugin-node-resolve"
+
+const devMode = (process.env.NODE_ENV === 'dev');
+
 export default [
     {
         input: './src/main.js',
@@ -7,7 +12,22 @@ export default [
         },
         output: {
             file: './dist/bundle.js',
-            format: 'es'
+            format: 'es',
+            plugins: [
+                nodeResolve(),
+                terser({
+                    ecma: 2020,
+                    mangle: { toplevel: true },
+                    compress: {
+                        module: true,
+                        toplevel: true,
+                        unsafe_arrows: true,
+                        drop_console: !devMode,
+                        drop_debugger: !devMode
+                    },
+                    output: { quote_style: 1 }
+                })
+            ]
         }
     }
 ];
