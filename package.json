@@ -3,7 +3,7 @@
   "author": "Suraj Yadav <ysuraj877@gmail.com> (https://jarusll.github.io)",
   "repository": "github:jarusll/Path",
   "version": "0.4.0",
-  "main": "src/main.cjs",
+  "main": "src/main.js",
   "license": "MIT",
   "scripts": {
     "test": "mocha"
