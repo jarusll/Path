@@ -2,7 +2,7 @@
   "name": "@jarusll/path",
   "author": "Suraj Yadav <ysuraj877@gmail.com> (https://jarusll.github.io)",
   "repository": "github:jarusll/Path",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "main": "src/main.js",
   "type": "module",
   "license": "MIT",
