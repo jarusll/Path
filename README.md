@@ -11,7 +11,7 @@ A wrapper class for node's `path` module.
     - `Path.fromString(PATH_STRING)`
     - `PATH_STRING.asPath()`
 
-![Class Diagram](https://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/jarusll/Path/master/Path.puml?)
+![Class Diagram](https://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/jarusll/Path/master/Path.puml)
 
 ### TODO
 ### DONE

@@ -8,15 +8,15 @@ describe("Path", function(){
         expect(testJsPath).to.be.instanceOf(Path)
     })
     it("inits with correct path", function(){
-        expect(testJsPath.path).to.equal("/home/jarusll/test.js")
+        expect(testJsPath.asString()).to.equal("/home/jarusll/test.js")
     })
     it("should give directory path", function(){
         expect(testJsPath.directory()).to.be.instanceOf(Path)
-        expect(testJsPath.directory().path).to.equal('/home/jarusll')
+        expect(testJsPath.directory().asString()).to.equal('/home/jarusll')
     })
     it("should give file path", function(){
         expect(testJsPath.file()).to.be.instanceOf(Path)
-        expect(testJsPath.file().path).to.equal('test.js')
+        expect(testJsPath.file().asString()).to.equal('test.js')
     })
     it("should be true for absolute and false for relative", function(){
         expect(testJsPath.isAbsolute()).to.be.true
@@ -31,10 +31,10 @@ describe("Path", function(){
         expect(testJsPath.isDirectory()).to.be.false
     })
     it("should join path when given as a Path instance", function(){
-        expect(testJsPath.directory().join(new Path("yolo.js")).path).to.equal("/home/jarusll/yolo.js")
+        expect(testJsPath.directory().join(new Path("yolo.js")).asString()).to.equal("/home/jarusll/yolo.js")
     })
     it("should join path when given as a string", function(){
-        expect(testJsPath.directory().join("yolo.js").path).to.equal("/home/jarusll/yolo.js")
+        expect(testJsPath.directory().join("yolo.js").asString()).to.equal("/home/jarusll/yolo.js")
     })
     it("should parse given path", function(){
         expect(testJsPath.parse()).to.deep.equal({
@@ -46,10 +46,10 @@ describe("Path", function(){
         })
     })
     it("should return relative path for path given as string", function(){
-        expect(testJsPath.relativeTo('/home/jarusll/abc/xyz').path).to.equal(Path.fromString('../abc/xyz').path)
+        expect(testJsPath.relativeTo('/home/jarusll/abc/xyz').asString()).to.equal(Path.fromString('../abc/xyz').asString())
     })
     it("should return relative path for path given as Path", function(){
-        expect(testJsPath.relativeTo(Path.fromString('/home/jarusll/abc/xyz')).path).to.equal(Path.fromString('../abc/xyz').path)
+        expect(testJsPath.relativeTo(Path.fromString('/home/jarusll/abc/xyz')).asString()).to.equal(Path.fromString('../abc/xyz').asString())
     })
     it("should return extension", function(){
         expect(testJsPath.extension()).to.equal('.js')
@@ -60,6 +60,6 @@ describe("Path", function(){
         const pathString = "/home/jarusll/test.js"
         let path = Path.fromString(pathString)
         expect(path).to.be.instanceOf(Path)
-        expect(path.path).to.equal("/home/jarusll/test.js")
+        expect(path.asString()).to.equal("/home/jarusll/test.js")
     })
 })

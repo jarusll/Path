@@ -1,17 +1,27 @@
 @startuml
+class String{
+   asPath()
+} 
+
 class Path{
     String path
+    
     constructor(stringPath)
     static fromString(stringPath)
+    
     isAbsolute()
     isRelative()
     isDirectory()
     isFile()
+
     directory()
     file()
+    extension()
+
     join(aPathOrString)
     parse()
     relativeTo()
-    extension()
+    
+    asString()
 }
 @enduml

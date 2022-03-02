@@ -75,6 +75,10 @@ class Path {
     extension() {
         return extname(this.path)
     }
+
+    asString(){
+        return this.path
+    }
 }
 
 export default Path
