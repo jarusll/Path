@@ -14,10 +14,10 @@ A wrapper class for node's `path` module.
 ![Class Diagram](https://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/jarusll/Path/master/Path.puml?)
 
 ### TODO
-- [ ] Add `asPath` message for String in IIFE
 - [ ] Bundling? for fun
 ### DONE
 - [x] Add `relativeTo` and `extension` messages. Did not add `resolve`, too confusing
 - [x] Add unit tests
 - [x] Add `join` and `parse`
 - [x] Add UML diagram
+- [x] Add `asPath` message for String in IIFE. Dint had to, it automatically imported itself

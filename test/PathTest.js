@@ -56,4 +56,10 @@ describe("Path", function(){
         expect(Path.fromString('abc.index.md').extension()).to.equal('.md')
         expect(Path.fromString('.index').extension()).to.equal('')
     })
+    it("should init from string", function(){
+        const pathString = "/home/jarusll/test.js"
+        let path = Path.fromString(pathString)
+        expect(path).to.be.instanceOf(Path)
+        expect(path.path).to.equal("/home/jarusll/test.js")
+    })
 })

@@ -1,4 +1,4 @@
-import { isAbsolute, parse, dirname, basename, join, relative, extname } from "path"
+import { isAbsolute, parse, dirname, basename, join, relative, extname } from 'path';
 
 class Path {
     /*
@@ -9,7 +9,7 @@ class Path {
             `FILE_PATH_IN_STRING.asPath()`
     */
     constructor(pathString) {
-        this.path = pathString
+        this.path = pathString;
     }
 
     static fromString(pathString) {
@@ -47,9 +47,9 @@ class Path {
     join(aPathOrString) {
         // overloading aPath and String
         if (aPathOrString instanceof Path) {
-            this.path = join(this.path, aPathOrString.path)
+            this.path = join(this.path, aPathOrString.path);
         } else {
-            this.path = join(this.path, aPathOrString)
+            this.path = join(this.path, aPathOrString);
         }
         return this
     }
@@ -77,8 +77,8 @@ class Path {
     }
 }
 
-export default Path
-
 String.prototype.asPath = function () {
     return Path.fromString(this.valueOf())
-}
+};
+
+export { Path as default };
