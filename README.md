@@ -4,7 +4,6 @@ A wrapper class for node's `path` module.
 # Documentation
 - I represent a filepath in system.
 - You can import me by 
-    - `const Path = require('@jarusll/path)`
     - `import Path from '@jarusll/path'`
 - You can use me by
     - `new Path(PATH_STRING)`
